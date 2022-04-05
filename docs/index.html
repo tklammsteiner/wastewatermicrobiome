@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>About</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/simplex.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<link href="site_libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.css" rel="stylesheet" />
+<script src="site_libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.min.js"></script>
+<link href="site_libs/fontawesome-4.7.0/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/leaflet-minimap-3.3.1/Control.MiniMap.min.css" rel="stylesheet" />
+<script src="site_libs/leaflet-minimap-3.3.1/Control.MiniMap.min.js"></script>
+<script src="site_libs/leaflet-minimap-3.3.1/Minimap-binding.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Austrian wastewater microbiome</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">About</a>
+</li>
+<li>
+  <a href="methods.html">Methods</a>
+</li>
+<li>
+  <a href="data.html">Data</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:thomas.klammsteiner@uibk.ac.at">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://corona.hydro-it.com/">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">About</h1>
+
+</div>
+
+
+<p></br></p>
+<style>
+div {
+  text-align: justify;
+}
+</style>
+<p>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+</p>
+<p></br> </br></p>
+<div id="sampling-sites" class="section level4">
+<h4>Sampling sites</h4>
+<div id="htmlwidget-0d8e6ad3eca6e72ecfe3" style="width:100%;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0d8e6ad3eca6e72ecfe3">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"World Imagery",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Stamen.TonerLite",null,"Toner Lite",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addLayersControl","args":[["Toner Lite","World Imagery"],[],{"collapsed":true,"autoZIndex":true,"position":"topright"}]},{"method":"addAwesomeMarkers","args":[[47.799901,46.967633,47.831138863,47.858889,47.0474,47.344934,47.48867,47.2537056370001,46.606083418,46.612214,46.780344,46.737752,46.639917718,46.740229,46.573213712,46.7120909290001,46.6103217960001,46.54241,46.6716838670001,47.214190194,48.3631945330001,47.833908,48.096022,48.399571,48.134712,47.968512,48.109062,48.031559,47.897177,47.9946701050001,48.330923,48.222991,48.795024,48.384126,48.33397,48.548934,48.261229,48.662143,48.570592,48.182616,48.473207,47.971313,48.138085,48.346988,48.820499,48.235263,48.077454,48.612989,46.8699375,48.1822223080001,48.0638889750001,48.241089,48.01572,48.210066,47.7248896840001,48.265248,48.324417,48.517874,48.006112,48.4944344090001,48.232846,48.355718,48.463916,48.522744,48.199034,48.63637,46.99666,46.879085,47.270833,47.430668,47.387329,47.135332,46.764978,46.953637,47.469811,47.062393,47.206874,46.717951,47.030062,46.829132,47.170078,47.557614,47.182436,47.076042,46.9437688260001,47.152843,46.872538,47.189783526,47.068444,47.59117,47.279116,46.761368,47.402619391,47.4859445220001,47.3107877140001,47.43058,47.365555633,47.5045260470001,47.174596,47.1169013630001,47.862991,47.4386111950001,47.4632166960001,47.88459,47.654174126,47.126214,47.981272],[16.517223,16.254749,16.542244973,16.647953,16.365722,16.136608,16.527964,16.278431228,14.333694339,13.877205,13.51924,14.845659,14.6538139890001,14.384301,14.0240086640001,14.0817052940001,13.491136909,14.304536,13.728960934,9.5016388,15.7644165580001,16.277043,16.329449,15.663752,16.542136,16.243298,14.894352,16.824629,16.250682,16.264040735,16.332069,15.92118,14.956944,16.226988,16.072564,16.072231,16.653731,15.665069,16.572478,16.124742,15.677497,14.760623,15.154077,16.735083,15.295653,15.335283,15.064197,15.183992,11.0263236,14.137499888,14.432777667,13.967061,13.746119,13.488188,13.6484159880001,13.058339,14.027952,14.033489,14.117478,14.50650417,14.645603,13.869683,13.433774,14.292941,14.800132,13.971886,15.472048,15.530078,15.979466,15.269701,15.104878,15.334579,15.567534,15.925993,15.362561,15.095942,15.634065,15.624471,15.185367,15.270886,14.672695,14.259321,16.000758,14.204807,16.017204437,15.662471,15.826444,15.656598382,14.695306,14.363349,16.025674,15.225123,11.835360759,9.67652765800005,9.58987118600004,9.726533,9.66305543600004,9.70669547200004,9.771706,9.85611117800005,12.995678,13.210861,12.826643527,13.12059,13.122222999,13.810315,13.085984],{"icon":"tint","markerColor":"beige","iconColor":"black","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Wasserverband Wulkatal","AWV Bezirk Jennersdorf","Kläranlage Eisenstadt","Kläranlage RHV Neusiedlersee- Westufer","Kläranlage Glasing","Kläranlage Riedlingsdorf","Kläranlage Oberpullendorf","Abwasserverband Rotenturm","Klagenfurt","Villach","Millstätter See/ Spittal","Mittleres Lavanttal","Kohldorf","St. Veit/ Glan","Rosegg","Ossiachersee","Hermagor (Abwasserverband Karnische Alpen)","Ferlach","Wasserverband Unteres Drautal","Liechtenstein","ARA AV An der Traisen","ARA AWV Wr. Neustadt- Süd","ARA Mödling","ARA GAV Raum Krems an der Donau","ARA AWV Schwechat","Gemeindeverband Abwasserbeseitigung Raum Bad Vöslau","ARA GAV Amstetten","ARA Großraum Bruck an der Leitha- Neusiedl am See","ARA Piestingtaler AV","ARA Baden","ARA AV Raum Korneuburg","ARA AV Anzbach- Laabental","ARA AV Lainsitz","ARA Stockerau","ARA Tulln","ARA Hollabrunn","ARA GAV Marchfeld","ARA GV Horn für Abwasserbeseitigung","ARA Mistelbach","ARA Wiental- Sammelkanal GmbH","ARA GAV Langenlois- Schönberg am Kamp","ARA Waidhofen a. d. Ybbs","ARA GAV Wieselburg","ARA Gänserndorf","ARA Abwasserreinigung im Waldviertel GmbH","ARA Melk","ARA GAV Kleines Erlauftal","ARA Zwettl","Obergurgl","Welser Heide","Steyr und Umgebung","Trattnachtal","Ager- West","Ried und Umgebung","Wolfgangsee- Ischl","Braunau","Eferding","Mühltal","Oberes Kremstal","Freistadt und Umgebung","Reinhaltungsverband Perg-Münzbach-Windhaag-Rechberg","Aschachtal","Schärding und Umgebung","Bad Leonfeld","Machland- Ost","Aigen- Schlägl","Stadtgemeinde Graz ARA Graz Gössendorf 1/316","Abwasserverband Grazerfeld","Hartberg","Diemlach","Leoben","Forstviertel","Wagna-Leibnitz","Feldbach","St. Marein/ Mi","Köflach- Graz","Weiz","Strass","Voitsberg","Frauental","Judenburg","Liezen","Sebersdorf","Murau","Fehring","St.Ruprecht an der Raab","Gnas","Krottendorf-Pr","Obdach","Ardning","Gde. St. Johann in der Haide ARA St. Johann i. d. H. 7/3393","Hollenegg","Abwasserverband Achental-Inntal-Zillertal","Hofsteig","Meiningen","Dornbirn","Hohenems","Bregenz","Ludesch","Abwasserverband Montafon","Siggerwiesen","Kläranlage Pfarrwerfen","ARA Saalachtal- Saalfelden","ARA Wallersee-Süd-Seekirchen","ARA Tennengau Süd- Kuchl","ARA Zentralraum Lungau","ARA Trumerseen"],null,null,null,["Wasserverband Wulkatal","AWV Bezirk Jennersdorf","Kläranlage Eisenstadt","Kläranlage RHV Neusiedlersee- Westufer","Kläranlage Glasing","Kläranlage Riedlingsdorf","Kläranlage Oberpullendorf","Abwasserverband Rotenturm","Klagenfurt","Villach","Millstätter See/ Spittal","Mittleres Lavanttal","Kohldorf","St. Veit/ Glan","Rosegg","Ossiachersee","Hermagor (Abwasserverband Karnische Alpen)","Ferlach","Wasserverband Unteres Drautal","Liechtenstein","ARA AV An der Traisen","ARA AWV Wr. Neustadt- Süd","ARA Mödling","ARA GAV Raum Krems an der Donau","ARA AWV Schwechat","Gemeindeverband Abwasserbeseitigung Raum Bad Vöslau","ARA GAV Amstetten","ARA Großraum Bruck an der Leitha- Neusiedl am See","ARA Piestingtaler AV","ARA Baden","ARA AV Raum Korneuburg","ARA AV Anzbach- Laabental","ARA AV Lainsitz","ARA Stockerau","ARA Tulln","ARA Hollabrunn","ARA GAV Marchfeld","ARA GV Horn für Abwasserbeseitigung","ARA Mistelbach","ARA Wiental- Sammelkanal GmbH","ARA GAV Langenlois- Schönberg am Kamp","ARA Waidhofen a. d. Ybbs","ARA GAV Wieselburg","ARA Gänserndorf","ARA Abwasserreinigung im Waldviertel GmbH","ARA Melk","ARA GAV Kleines Erlauftal","ARA Zwettl","Obergurgl","Welser Heide","Steyr und Umgebung","Trattnachtal","Ager- West","Ried und Umgebung","Wolfgangsee- Ischl","Braunau","Eferding","Mühltal","Oberes Kremstal","Freistadt und Umgebung","Reinhaltungsverband Perg-Münzbach-Windhaag-Rechberg","Aschachtal","Schärding und Umgebung","Bad Leonfeld","Machland- Ost","Aigen- Schlägl","Stadtgemeinde Graz ARA Graz Gössendorf 1/316","Abwasserverband Grazerfeld","Hartberg","Diemlach","Leoben","Forstviertel","Wagna-Leibnitz","Feldbach","St. Marein/ Mi","Köflach- Graz","Weiz","Strass","Voitsberg","Frauental","Judenburg","Liezen","Sebersdorf","Murau","Fehring","St.Ruprecht an der Raab","Gnas","Krottendorf-Pr","Obdach","Ardning","Gde. St. Johann in der Haide ARA St. Johann i. d. H. 7/3393","Hollenegg","Abwasserverband Achental-Inntal-Zillertal","Hofsteig","Meiningen","Dornbirn","Hohenems","Bregenz","Ludesch","Abwasserverband Montafon","Siggerwiesen","Kläranlage Pfarrwerfen","ARA Saalachtal- Saalfelden","ARA Wallersee-Süd-Seekirchen","ARA Tennengau Süd- Kuchl","ARA Zentralraum Lungau","ARA Trumerseen"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMiniMap","args":[null,"Stamen.TonerLite","bottomright",150,150,19,19,-5,false,false,false,true,false,false,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]}],"limits":{"lat":[46.54241,48.820499],"lng":[9.5016388,16.824629]}},"evals":[],"jsHooks":[]}</script>
+<p></br> </br> </br> </br></p>
+</div>
+
+<hr>
+
+</br>
+
+<a href="https://uibk.ac.at">
+  <img src="media/uibk-logo.png" width="20%" align="right">
+</a>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

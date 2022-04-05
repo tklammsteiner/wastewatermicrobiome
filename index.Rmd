@@ -1,0 +1,55 @@
+---
+title: "About"
+---
+
+</br>
+
+<style>
+div {
+  text-align: justify;
+}
+</style>
+
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</p>
+
+
+</br>
+</br>
+
+#### Sampling sites
+```{r echo=F, message=F, warning=F, out.width="100%"}
+library(leaflet)
+library(ggplot2)
+library(dplyr)
+
+data <- read.csv("data/wwtp-locations.csv")
+
+wwtp <- makeAwesomeIcon(
+  icon = "tint",
+  iconColor = "black",
+  markerColor = "beige",
+  library = "fa"
+)
+
+
+data %>% 
+  leaflet() %>% 
+  addProviderTiles(providers$Esri.WorldImagery, group = "World Imagery") %>% 
+  addProviderTiles(providers$Stamen.TonerLite, group = "Toner Lite") %>% 
+  addLayersControl(baseGroups = c('Toner Lite', "World Imagery")) %>% 
+  addAwesomeMarkers(data$Longitude,
+             data$Latitude, 
+             label = data$Standort,
+             icon = wwtp, 
+             popup = data$Standort) %>% 
+  addMiniMap(toggleDisplay = TRUE,
+             tiles = providers$Stamen.TonerLite)
+
+```
+
+</br>
+</br>
+</br>
+</br>

@@ -1,0 +1,21 @@
+name: "Austrian wastewater microbiome"
+navbar:
+  title: "Austrian wastewater microbiome"
+  left:
+    - text: "About"
+      href: index.html
+    - text: "Methods"
+      href: methods.html
+    - text: "Data"
+      href: data.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: mailto:thomas.klammsteiner@uibk.ac.at
+    - icon: fa-home fa-lg
+      href: https://corona.hydro-it.com/
+output_dir: "docs"
+output:
+  html_document:
+    theme: simplex
+    include:
+      after_body: footer.html
